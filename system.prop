@@ -1,10 +1,10 @@
 # Samsung Specific Properties
-ro.build.PDA=SC52AOMS1BUJ1
-ro.build.sw_version=SC52AOMS1BUJ1
+ro.build.PDA=SC52AOMU1BUK1
+ro.build.sw_version=SC52AOMU1BUK1
 ro.build.official.release=true
 ro.build.2ndbrand=false
 ro.config.rm_preload_enabled=1
-ro.build.changelist=22431648
+ro.build.changelist=23058182
 ro.product_ship=true
 ro.user_trial=FALSE
 ro.hardware.chipname=SM8250
