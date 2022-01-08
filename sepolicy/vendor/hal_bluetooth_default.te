@@ -3,8 +3,6 @@ binder_call(hal_bluetooth_default, vaultkeeperd);
 # ro.rfkilldisabled
 get_prop(hal_bluetooth_default, rfkilldisabled_prop);
 
-get_prop(hal_bluetooth_default, vendor_factory_prop);
-
 # vendor.bluetooth_fw_ver
 set_prop(hal_bluetooth_default, wifi_log_prop);
 
