@@ -8,7 +8,6 @@ vndbinder_use(vaultkeeperd);
 
 get_prop(vaultkeeperd, exported_system_prop);
 get_prop(vaultkeeperd, hwservicemanager_prop);
-get_prop(vaultkeeperd, vendor_factory_prop);
 set_prop(vaultkeeperd, vendor_sec_vaultkeeper_prop);
 
 allow vaultkeeperd efs_file:dir { ioctl read write getattr lock open watch watch_reads add_name search };

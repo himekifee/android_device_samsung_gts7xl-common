@@ -1,5 +1,2 @@
 ### RFKILL
 vendor_public_prop(rfkilldisabled_prop);
-
-### other properties
-vendor_public_prop(vendor_factory_prop);
