@@ -564,6 +564,9 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+PRODUCT_PACKAGES += \
+    secril_config_svc
+
 # Samsung App
 PRODUCT_PACKAGES += \
     AdvancedDisplay \
