@@ -47,10 +47,12 @@
         <version>1.4</version>
         <interface>
             <name>ICryptoFactory</name>
+            <instance>clearkey</instance>
             <instance>widevine</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
+            <instance>clearkey</instance>
             <instance>widevine</instance>
         </interface>
     </hal>
