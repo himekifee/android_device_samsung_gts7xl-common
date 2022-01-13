@@ -100,6 +100,10 @@ ro.camera.notify_nfc=1
 # Charger
 ro.charger.disable_init_blank=true
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8250
+
 # CNE
 persist.vendor.cne.feature=0
 
