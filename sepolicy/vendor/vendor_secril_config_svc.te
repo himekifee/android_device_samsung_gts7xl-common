@@ -21,3 +21,6 @@ allow vendor_secril_config_svc imei_efs_file:dir create_dir_perms;
 allow vendor_secril_config_svc imei_efs_file:file create_file_perms;
 allow vendor_secril_config_svc sec_poc_file:dir r_dir_perms;
 allow vendor_secril_config_svc sec_poc_file:file r_file_perms;
+
+r_dir_file(vendor_secril_config_svc, imei_efs_file);
+dontaudit vendor_secril_config_svc radio_control_prop:property_service set;
