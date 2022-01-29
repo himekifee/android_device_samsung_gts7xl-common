@@ -1,4 +1,3 @@
-ro.build.characteristics=nosdcard
 vendor.wv.oemcrypto.debug.enable_external_display_check=1
 restore.feature.use_samsung_smart_switch_flow=1
 setupwizard.feature.enable_stencil_partner_customization=1
