@@ -8,7 +8,6 @@ ro.build.changelist=23058182
 ro.product_ship=true
 ro.user_trial=FALSE
 ro.hardware.chipname=SM8250
-ro.build.characteristics=nosdcard
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q8250-19134-1
