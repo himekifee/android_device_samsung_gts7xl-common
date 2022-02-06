@@ -898,7 +898,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.trustedui</name>
-        <version>1.0</version>
+        <version>1.0-1</version>
         <interface>
             <name>ITrustedInput</name>
             <instance>default</instance>
