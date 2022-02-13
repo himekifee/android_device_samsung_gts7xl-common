@@ -6,14 +6,16 @@ init_daemon_domain(macloader);
 
 set_prop(macloader, vendor_wifi_prop);
 
+allow macloader init:unix_stream_socket connectto;
+
 allow macloader self:capability { net_admin };
 
 allow macloader self:udp_socket create_socket_perms;
 allowxperm macloader self:udp_socket ioctl { 0x8913 0x8914 };
 
 # /data/vendor/conn
-allow macloader conn_vendor_data_file:dir rw_dir_perms;
-allow macloader conn_vendor_data_file:file create_file_perms;
+allow macloader vendor_convergence_data_file:dir rw_dir_perms;
+allow macloader vendor_convergence_data_file:file create_file_perms;
 
 # /mnt/vendor
 allow macloader mnt_vendor_file:dir search;
