@@ -19,8 +19,8 @@ allow hal_bluetooth_default mnt_vendor_file:dir search;
 allow hal_bluetooth_default efs_file:dir r_dir_perms;
 
 # /mnt/vendor/conn
-allow hal_bluetooth_default conn_vendor_data_file:dir r_dir_perms;
-allow hal_bluetooth_default conn_vendor_data_file:file r_file_perms;
+allow hal_bluetooth_default vendor_convergence_data_file:dir r_dir_perms;
+allow hal_bluetooth_default vendor_convergence_data_file:file r_file_perms;
 
 # /sys/devices/platform/bluetooth/rfkill/rfkill0/state
 allow hal_bluetooth_default sysfs_bt_writable:file rw_file_perms;
