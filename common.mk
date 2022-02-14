@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6 \
     libcamera2ndk_vendor \
     libgui_vendor \
-    Snap \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.postproc@1.0 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
