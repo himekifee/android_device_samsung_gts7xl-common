@@ -357,7 +357,7 @@ PRODUCT_COPY_FILES += \
 
 # Imsservice
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/broadcast_allowlist.xml:$(TARGET_COPY_OUT_SYSTEM)/system_ext/etc/broadcast_allowlist.xml
+    $(LOCAL_PATH)/configs/broadcast_allowlist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/broadcast_allowlist.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -618,7 +618,7 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/system_ext/etc/permissions/privapp-permissions-qti.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml
 
 # Thermal
 PRODUCT_PACKAGES += \
