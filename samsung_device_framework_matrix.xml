@@ -71,12 +71,17 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.media.converter</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
         <interface>
             <name>ISehColorConverterStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.media.mpp</name>
+        <interface>
+            <name>ISehMppStore</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -92,7 +97,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.radio</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>ISehRadio</name>
             <instance>slot1</instance>
@@ -129,16 +134,17 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.snap</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.2</version>
         <interface>
             <name>ISehSnap</name>
             <instance>default</instance>
+            <instance>secsnap</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.sysinput</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>ISehSysInputDev</name>
             <instance>default</instance>
@@ -156,7 +162,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.vibrator</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>ISehVibrator</name>
             <instance>default</instance>
@@ -165,7 +171,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.wifi</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>2.2</version>
         <interface>
             <name>ISehWifi</name>
             <instance>default</instance>
@@ -174,7 +180,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>3.1</version>
         <interface>
             <name>ISehHostapd</name>
             <instance>default</instance>
@@ -183,7 +189,7 @@
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>3.1</version>
         <interface>
             <name>ISehSupplicant</name>
             <instance>default</instance>
