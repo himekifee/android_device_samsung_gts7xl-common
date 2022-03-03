@@ -286,6 +286,13 @@ on init
 	chown system system /sys/class/lcd/panel1/fw_up
 	chmod 0660 /sys/class/lcd/panel1/fw_up
 
+# Firmware ID
+	chown system system /sys/class/lcd/panel/fw_id
+	chmod 0664 /sys/class/lcd/panel/fw_id
+
+	chown system system /sys/class/lcd/panel1/fw_id
+	chmod 0664 /sys/class/lcd/panel1/fw_id
+
 # POC_MCA
 	chown system system /sys/class/lcd/panel/poc_mca
 	chmod 0440 /sys/class/lcd/panel/poc_mca
@@ -477,3 +484,6 @@ on init
 	chown system system /sys/class/lcd/panel/tcon_pe
 	chmod 0660 /sys/class/lcd/panel/tcon_pe
 
+# debug information for dumpstate
+	chown system system /dev/sec_display_debug
+	chmod 0660 /dev/sec_display_debug

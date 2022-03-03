@@ -26,14 +26,6 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-
-service scs /system/bin/scs
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-
 # Create carrier folder for HiddenMenu
 on post-fs
     mkdir /efs/carrier 0755 radio system
@@ -48,6 +40,13 @@ on post-fs
     exec - system system -- /system/bin/mafpc_write
 
 on post-fs-data
+    # Samsung Pay
+    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
+
+    # MST/NFC Switch
+    chown vendor_spay system /dev/mst_ctrl
+    chmod 0660 /dev/mst_ctrl
+
 # Cirrus Amp Calibration
     chown system audio /sys/class/cirrus/cirrus_cal/status
     chown system audio /sys/class/cirrus/cirrus_cal/rdc
@@ -159,14 +158,15 @@ on boot
     chmod 0664 /dev/cpuset/abnormal/tasks
     chmod 0664 /dev/cpuset/abnormal/cpus
 
-# SSWAP
-service swapon /system/bin/sswap -s -z -f 2560
-    class core
-    user system
-    group system
-    capabilities SYS_ADMIN
-    seclabel u:r:sswap:s0
-    oneshot
+    mkdir /dev/cpuset/moderate
+    write /dev/cpuset/moderate/cpus 0-2,4-6
+    copy /dev/cpuset/mems /dev/cpuset/moderate/mems
+
+    chown system system /dev/cpuset/moderate
+    chown system system /dev/cpuset/moderate/tasks
+    chown system system /dev/cpuset/moderate/cpus
+    chmod 0664 /dev/cpuset/moderate/tasks
+    chmod 0664 /dev/cpuset/moderate/cpus
 
 # Pageboostd
 on property:sys.boot_completed=1
@@ -183,6 +183,8 @@ service pageboostd /system/bin/pageboostd
 on early-init
     chmod 0777 /dev/memcg
     chown system system /dev/memcg
+    chown system system /dev/memcg/cgroup.procs
+
 service heimdalld /system/bin/heimdalld
     class core
     user system
@@ -203,3 +205,20 @@ on post-fs-data && property:ro.csc.sales_code=TMB
     mount none /mnt/temp/priv-app/SprintHub /system/carrier/priv-app/SprintHub bind
     umount /mnt/temp
     rmdir /mnt/temp
+
+# DCK properties based on target
+# DigitalKey (Supported Country) : EUR, KOR, USA, CAN, SEA/Oceania
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=KR
+    setprop ro.gms.dck.eligible_wcc 1
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=US
+    setprop ro.gms.dck.eligible_wcc 1
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=GB
+    setprop ro.gms.dck.eligible_wcc 1
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=DE
+    setprop ro.gms.dck.eligible_wcc 1
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=FR
+    setprop ro.gms.dck.eligible_wcc 1
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=IT
+    setprop ro.gms.dck.eligible_wcc 1
+on property:sys.boot_completed=1 && property:ro.csc.countryiso_code=ES
+    setprop ro.gms.dck.eligible_wcc 1
