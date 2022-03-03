@@ -188,7 +188,7 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 BOARD_VENDOR := samsung
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-12-01
+VENDOR_SECURITY_PATCH := 2022-02-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
