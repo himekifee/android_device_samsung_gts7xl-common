@@ -575,6 +575,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay \
     FlipFlap \
+    SamsungDAP \
     SamsungDoze
 
 # Seccomp policy
