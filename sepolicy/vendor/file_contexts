@@ -118,6 +118,13 @@
 ### Sys files
 /sys/module/fsc(/.*)?                        u:object_r:sysfs_fsc:s0
 
+### Wakeup devices
+/sys/devices/platform/soc/[a-f0-9]+(\.)?qcom,[^/]+/(subsys[0-9]/)?wakeup(/.*)?        u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/wakeup(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/msm_[a-z0-9]+(_[a-z0-9]+)?/wakeup([0-9])+(/.*)?             u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:(\.)?qcom,[^/]+/(subsys[0-9]/)?wakeup(/.*)?             u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:i2c@[0-9]+/i2c-[0-9]+/[0-9]+-[a-z0-9]+/wakeup(/.*)?     u:object_r:sysfs_wakeup:s0
+
 ### VENDOR
 /(vendor|system/vendor)/bin/argosd               u:object_r:argosd_exec:s0
 /(vendor|system/vendor)/bin/macloader            u:object_r:macloader_exec:s0
