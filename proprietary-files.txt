@@ -1054,7 +1054,7 @@ vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc
 vendor/lib64/libhexagon_nn_stub.so
 
 # NFC
-system/etc/libnfc-nci.conf
+system/etc/libnfc-nci.conf:product/etc/libnfc-nci.conf
 system/etc/nfcee_access.xml
 vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/sec_senn82ab_rfreg.bin
