@@ -109,7 +109,7 @@ dalvik.vm.lockprof.threshold=500
 
 # Display
 ro.sf.init.lcd_density=600
-ro.sf.lcd_density=450
+ro.sf.lcd_density=390
 vendor.display.comp_mask=0
 vendor.display.disable_dynamic_fps=1
 vendor.display.disable_excl_rect=0
