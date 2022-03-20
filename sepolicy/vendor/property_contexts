@@ -15,7 +15,7 @@ ro.vendor.multisim.                          u:object_r:vendor_radio_prop:s0
 ro.vendor.radio.                             u:object_r:vendor_radio_prop:s0
 
 ### Thermal
-vendor.sys.thermal.                          u:object_r:thermal_normal_prop:s0
+vendor.sys.thermal.                          u:object_r:vendor_thermal_normal_prop:s0
 
 ### Vaultkeeper
 vendor.ro.security.vaultkeeper.              u:object_r:vendor_sec_vaultkeeper_prop:s0
