@@ -177,9 +177,7 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 # Camera
 system/lib/libSEF.quram.so
 system/lib64/libSEF.quram.so
-vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/bin/hw/vendor.samsung.hardware.snap@1.2-service
-vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/etc/init/vendor.samsung.hardware.snap@1.2-service.rc
 vendor/lib/com.qti.feature2.anchorsync.so
 vendor/lib/com.qti.feature2.demux.so
@@ -245,10 +243,6 @@ vendor/lib/libtriplecam_video_optical_zoom.so
 vendor/lib/libuniplugin.so
 vendor/lib/libvideoutils.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib/vendor.samsung.hardware.camera.device@5.0.so
-vendor/lib/vendor.samsung.hardware.camera.device@5.0-impl.so
-vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
-vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so
 vendor/lib/vendor.samsung.hardware.snap@1.0.so
 vendor/lib/vendor.samsung.hardware.snap@1.1.so
 vendor/lib/vendor.samsung.hardware.snap@1.2.so
@@ -316,10 +310,6 @@ vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
-vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
 vendor/lib64/vendor.samsung.hardware.snap@1.0.so
 vendor/lib64/vendor.samsung.hardware.snap@1.1.so
 vendor/lib64/vendor.samsung.hardware.snap@1.2.so

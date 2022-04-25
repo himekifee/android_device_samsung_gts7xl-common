@@ -150,7 +150,6 @@
 
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.biometrics\.face@[0-9]\.[0-9]-service                    u:object_r:vendor_biometricsface_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.biometrics\.fingerprint@[0-9]\.[0-9]-service             u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64                 u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.light-service                                            u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.media\.converter@[0-9]\.[0-9]-service                    u:object_r:hal_converter_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.miscpower@[0-9]\.[0-9]-service                           u:object_r:hal_power_default_exec:s0
