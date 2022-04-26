@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0 \
     android.hardware.automotive.vehicle@2.0-manager-lib
 
+# BatteryLifeExtender
+PRODUCT_PACKAGES += \
+    vendor.lineage.batterylifeextender@1.0-service.samsung
+
 # Biometrics
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.face@1.0
