@@ -9,6 +9,7 @@ vendor.camera.                               u:object_r:vendor_camera_prop:s0
 
 ### fastcharge
 persist.vendor.sec.fastchg_enabled           u:object_r:vendor_fastcharge_prop:s0
+persist.vendor.sec.superfastchg_enabled      u:object_r:vendor_fastcharge_prop:s0
 
 ### NFC
 vendor.nfc.fw.                               u:object_r:vendor_nfc_prop:s0
