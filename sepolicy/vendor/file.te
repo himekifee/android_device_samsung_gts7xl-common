@@ -14,6 +14,9 @@ allow omr_file labeledfs:filesystem associate;
 type spu_file, fs_type;
 allow spu_file labeledfs:filesystem associate;
 
+type dqmdbg_file, fs_type;
+allow dqmdbg_file labeledfs:filesystem associate;
+
 ### DATA
 type acdbdata_vendor_data_file, file_type, data_file_type;
 type biometrics_vendor_data_file, file_type, data_file_type;

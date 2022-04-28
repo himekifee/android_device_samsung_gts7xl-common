@@ -14,7 +14,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/sm8250-common/sm8250-common-vendor.mk)
+$(call inherit-product, vendor/samsung/gts7xl-common/gts7xl-common-vendor.mk)
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -458,7 +458,7 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    device/samsung/sm8250-common/overlay/hardware/samsung/AdvancedDisplay
+    device/samsung/gts7xl-common/overlay/hardware/samsung/AdvancedDisplay
 
 # Permissions
 PRODUCT_COPY_FILES += \
