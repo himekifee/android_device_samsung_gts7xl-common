@@ -184,7 +184,7 @@ PRODUCT_PACKAGES += \
     init.samsung.rc \
     init.target.rc \
     init.udfps.rc \
-    init.y2q.rc \
+    init.gts7xl.rc \
     ueventd.qcom.rc
 
 # Component overrides
@@ -315,9 +315,9 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service \
     android.hardware.gatekeeper@1.0.vendor
+    #android.hardware.gatekeeper@1.0-impl \
+    #android.hardware.gatekeeper@1.0-service \
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -367,6 +367,12 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     libipanat \
     liboffloadhal
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    android.hardware.keymaster@4.0.vendor \
+    libkeymaster4_1support.vendor:64
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -428,9 +434,6 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 # OMX
 PRODUCT_PACKAGES += \
