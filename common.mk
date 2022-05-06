@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.face@1.0
+    android.hardware.biometrics.face@1.0.vendor
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -149,11 +149,14 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.3 \
     android.hardware.camera.device@3.4 \
     android.hardware.camera.device@3.5 \
+    android.hardware.camera.device@3.6 \
+    android.hardware.camera.device@3.6.vendor \
     android.hardware.camera.provider@2.4 \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.5 \
     android.hardware.camera.provider@2.5-legacy \
-    android.hardware.camera.provider@2.5-service_64.kona \
+    android.hardware.camera.provider@2.6 \
+    android.hardware.camera.provider@2.6.vendor \
     libcamera2ndk_vendor \
     libgui_vendor \
     vendor.qti.hardware.camera.device@1.0 \
@@ -194,11 +197,6 @@ PRODUCT_COPY_FILES += \
 # Configstore
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0
-
-# Consumer IR
-PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    android.hardware.ir@1.0-service.samsung
 
 # Cryptfs
 PRODUCT_PACKAGES += \
@@ -439,11 +437,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.media@1.0 \
     android.hardware.media.bufferpool@2.0 \
-    android.hardware.media.c2@1.0 \
-    android.hardware.media.c2@1.1 \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.common-V1-ndk_platform.vendor \
     android.hardware.media.omx@1.0-service \
     libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.1.vendor \
     libcodec2_vndk.vendor \
     libmm-omxcore \
     libOmxAacEnc \
@@ -473,7 +473,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
@@ -520,7 +519,6 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.samsung-libperfmgr \
     android.hardware.power@1.2.vendor \
     vendor.qti.hardware.perf@2.0.vendor \
     vendor.qti.hardware.perf@2.1.vendor \
@@ -623,7 +621,9 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.samsung
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor
+
 
 # Touch
 PRODUCT_PACKAGES += \
@@ -644,9 +644,12 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.samsung \
     vibrator.default \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service \
+    android.hardware.vibrator@1.0.vendor \
+    android.hardware.vibrator@1.1.vendor \
+    android.hardware.vibrator@1.2.vendor \
+    android.hardware.vibrator@1.3.vendor
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

@@ -15,6 +15,9 @@
 -->
 
 <MediaCodecs>
+    <Settings>
+        <Domain name="telephony" enabled="true" />
+    </Settings>
     <Decoders>
         <MediaCodec name="c2.sec.aac.decoder" type="audio/mp4a-latm" rank="16">
             <Limit name="channel-count" max="8" />
@@ -57,7 +60,7 @@
             <Limit name="channel-count" max="2" />
             <Limit name="sample-rate" ranges="8000-48000" />
             <Limit name="bitrate" range="5000-384000" />
-        </MediaCodec>	
+        </MediaCodec>
         <MediaCodec name="c2.sec.vc1.decoder" rank="1">
             <Type name="video/wvc1">
                 <Limit name="size" min="32x32" max="2048x2048" />

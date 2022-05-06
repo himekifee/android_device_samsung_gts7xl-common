@@ -108,6 +108,8 @@ vendor/lib64/libaudcal.so
 vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
 vendor/lib64/libaudioparsers.so
+vendor/lib64/libcodec2_hidl@1.0.so
+vendor/lib64/libcodec2_hidl@1.1.so
 vendor/lib64/libcodec2_sec_aacdec.so
 vendor/lib64/libcodec2_sec_aacenc.so
 vendor/lib64/libcodec2_sec_amrnbdec.so
@@ -124,6 +126,7 @@ vendor/lib64/libcodec2_sec_wmv7dec.so
 vendor/lib64/libcodec2_sec_wmv8dec.so
 vendor/lib64/libcodec2_soft_ac4dec.so
 vendor/lib64/libcodec2_soft_eac3dec.so
+vendor/lib64/libcodec2_vndk.so
 vendor/lib64/libcodecsolutionhelper_vendor.so
 vendor/lib64/libengmode_client.so
 vendor/lib64/libprofileparamstorage.so
@@ -145,6 +148,8 @@ vendor/lib64/soundfx/libswdap.so
 vendor/lib64/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+vendor/etc/seccomp_policy/samsung.software.media.c2-base-policy
+vendor/etc/seccomp_policy/samsung.software.media.c2-ext-policy
 
 # Bluetooth
 vendor/lib/hw/audio.bluetooth_qti.default.so
@@ -171,8 +176,8 @@ vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 # Camera
 system/lib/libSEF.quram.so
 system/lib64/libSEF.quram.so
-vendor/bin/hw/vendor.samsung.hardware.snap@1.2-service
-vendor/etc/init/vendor.samsung.hardware.snap@1.2-service.rc
+# vendor/bin/hw/vendor.samsung.hardware.snap@1.2-service
+# vendor/etc/init/vendor.samsung.hardware.snap@1.2-service.rc
 vendor/lib/com.qti.feature2.anchorsync.so
 vendor/lib/com.qti.feature2.demux.so
 vendor/lib/com.qti.feature2.frameselect.so
@@ -940,12 +945,18 @@ system_ext/lib64/libmmosal.so
 system_ext/lib/vendor.qti.hardware.vpp@1.1.so
 system_ext/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/bin/hw/mppserver
+vendor/lib64/libarcsoft_deflicker_native.so
+vendor/lib64/libFrucDYNVLib.so
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
 vendor/bin/hw/vendor.samsung.hardware.media.converter@1.0-service
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/mppserver.rc
 vendor/etc/init/vendor.samsung.hardware.media.converter@1.0-service.rc
 vendor/etc/seccomp_policy/mediaextractor_sec.policy
 vendor/etc/system_properties.xml
+vendor/lib64/libSecC2ComponentStore.so
+vendor/lib64/libmediaconverter.so
 vendor/etc/init/samsung.software.media.c2@1.0-service.rc
 vendor/bin/hw/samsung.software.media.c2@1.0-service
 vendor/lib/libAlacSwDec.so
@@ -1170,9 +1181,9 @@ system/bin/connfwexe
 system/bin/ddexe
 system/bin/sec_diag_uart_log
 system/bin/smdexe
-system/etc/init/init.rilchip.rc
-system/etc/init/init.rilcommon.rc
-system/etc/init/init.rilepdg.rc
+# system/etc/init/init.rilchip.rc
+# system/etc/init/init.rilcommon.rc
+# system/etc/init/init.rilepdg.rc
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
 system/lib/libfloatingfeature.so
@@ -1209,8 +1220,8 @@ vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
-vendor/etc/init/init.vendor.rilchip.rc
-vendor/etc/init/init.vendor.rilcommon.rc
+# vendor/etc/init/init.vendor.rilchip.rc
+# vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/netmgrd.rc
@@ -1343,8 +1354,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 # Samsung
 vendor/bin/hw/vendor.samsung.hardware.miscpower@2.0-service
 vendor/bin/hw/vendor.samsung.hardware.sysinput@1.2-service
-vendor/bin/hw/android.hardware.power.samsung-service
-vendor/etc/init/power-default-sec.rc
 vendor/etc/init/vendor.samsung.hardware.miscpower@2.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.sysinput@1.2-service.rc
 vendor/lib64/vendor.samsung.hardware.miscpower@2.0.so
@@ -1434,6 +1443,10 @@ vendor/etc/thermal-engine.conf
 vendor/lib/vendor.samsung.hardware.thermal@1.0.so
 -vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib/libhypervintf.so
+vendor/lib64/libhypervintf.so
+vendor/lib/vendor.samsung.hardware.hyper-V2-ndk_platform.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so
 
 # Time services
 -vendor/app/TimeService/TimeService.apk

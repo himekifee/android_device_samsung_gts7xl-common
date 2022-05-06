@@ -41,7 +41,7 @@ limitations under the License.
             <!-- measured [52-52] lower-upper [13-142] median * 1.5 [79] -->
             <Limit name="measured-frame-rate-1920x1080" range="29-65" />
             <!-- measured [14-14] lower-upper [4-39] median * 1.5 [21] -->
-            <Limit name="measured-frame-rate-3840x2160" range="8-18" />
+            <Limit name="measured-frame-rate-3840x2160" range="25-50" />
         </MediaCodec>
         <MediaCodec name="OMX.qcom.video.encoder.hevc.cq" type="video/hevc" update="true">
             <!-- measured [818-823] lower-upper [207-2207] median * 1.5 [1231] -->
