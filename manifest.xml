@@ -17,7 +17,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
+    <!-- <hal format="hidl">
         <name>android.hardware.authsecret</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -25,7 +25,7 @@
             <name>IAuthSecret</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal> -->
     <hal format="hidl">
         <name>android.hardware.biometrics.face</name>
         <transport>hwbinder</transport>
@@ -83,6 +83,12 @@
         </interface>
     </hal>
     <hal format="hidl" override="true">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <fqname>@4.1::IKeymasterDevice/default</fqname>
+        <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
+    </hal>
+    <hal format="hidl" override="true">
         <name>android.hardware.media.c2</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -115,6 +121,14 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.power</name>
+        <transport>hwbinder</transport>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
@@ -128,16 +142,6 @@
         <interface>
             <name>IRadioConfig</name>
             <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>eSE1</instance>
-            <instance>SIM1</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -212,10 +216,6 @@
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IDisplayColorCalibration</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
             <name>IDisplayModes</name>
             <instance>default</instance>
         </interface>
@@ -225,27 +225,6 @@
         </interface>
         <interface>
             <name>ISunlightEnhancement</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.lineage.touch</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IGloveMode</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IKeyDisabler</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IStylusMode</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>ITouchscreenGesture</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -550,7 +529,7 @@
             <instance>Uim0</instance>
         </interface>
     </hal>
-    <hal format="hidl" override="true">
+    <!-- <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -558,7 +537,7 @@
             <name>IUimRemoteServiceClient</name>
             <instance>uimRemoteClient0</instance>
         </interface>
-    </hal>
+    </hal> -->
     <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.uim_remote_server</name>
         <transport>hwbinder</transport>

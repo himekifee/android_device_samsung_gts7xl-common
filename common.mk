@@ -16,6 +16,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/gts7xl-common/gts7xl-common-vendor.mk)
 
+PRODUCT_CHARACTERISTICS := tablet
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -96,6 +98,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
@@ -111,10 +114,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
-
-# Authsecret
-PRODUCT_PACKAGES += \
-    android.hardware.authsecret@1.0.vendor
 
 # Automotive/Gearhead
 PRODUCT_PACKAGES += \
@@ -352,7 +351,7 @@ PRODUCT_COPY_FILES += \
 
 # Imsservice
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/broadcast_allowlist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/broadcast_allowlist.xml
+    $(LOCAL_PATH)/configs/broadcast_allowlist.xml:$(TARGET_COPY_OUT_VENDOR)/etc/broadcast_allowlist.xml
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -368,7 +367,6 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service.samsung \
     android.hardware.keymaster@4.0.vendor \
     libkeymaster4_1support.vendor:64
 
@@ -422,9 +420,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.samsung \
     android.hardware.nfc@1.2.vendor \
-    android.hardware.secure_element@1.0 \
-    android.hardware.secure_element@1.1 \
-    android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     libchrome.vendor \
     libnfc-nci \
@@ -522,7 +517,8 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     vendor.qti.hardware.perf@2.0.vendor \
     vendor.qti.hardware.perf@2.1.vendor \
-    vendor.qti.hardware.perf@2.2.vendor
+    vendor.qti.hardware.perf@2.2.vendor \
+    android.hardware.power@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PLATFORM_VNDK_VERSION)/etc/powerhint.json
@@ -565,7 +561,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     libprotobuf-cpp-full \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libsecril-client.vendor
 
 PRODUCT_PACKAGES += \
     secril_config_svc
@@ -623,11 +620,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0.vendor \
     android.hardware.thermal@2.0.vendor
-
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
 
 # USB
 PRODUCT_PACKAGES += \
