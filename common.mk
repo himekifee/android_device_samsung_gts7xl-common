@@ -158,7 +158,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor \
     libcamera2ndk_vendor \
     libgui_vendor \
-    vendor.qti.hardware.camera.device@1.0 \
+    vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0 \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -174,12 +174,9 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.qti.dcvs.sh \
     init.qti.fm.sh \
-    init.nfc.samsung.rc \
     init.qcom.rc \
     init.qcom.factory.rc \
     init.qcom.usb.rc \
-    init.recovery.qcom.rc \
-    init.recovery.samsung.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.eif.rc \
@@ -416,18 +413,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
-# NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service.samsung \
-    android.hardware.nfc@1.2.vendor \
-    com.android.nfc_extras \
-    libchrome.vendor \
-    libnfc-nci \
-    libnfc_nci_jni \
-    NfcNci \
-    SecureElement \
-    Tag
-
 # OMX
 PRODUCT_PACKAGES += \
     android.hardware.media@1.0 \
@@ -592,7 +577,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/samsung/aidl/power-libperfmgr \
     hardware/samsung/hidl/fastcharge \
-    hardware/samsung/nfc \
     hardware/samsung \
     vendor/qcom/opensource/interfaces/camera/postproc/1.0
 
@@ -675,3 +659,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
+
+# Custom workaround for imsservice
+PRODUCT_PACKAGES += \
+    sem_framework
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sem_framework.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/sem_framework.xml
+PRODUCT_BOOT_JARS += \
+    sem_framework

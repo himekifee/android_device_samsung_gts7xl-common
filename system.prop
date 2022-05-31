@@ -1,9 +1,9 @@
 # Samsung Specific Properties
-ro.build.PDA=SC52AOMU1CVB1
+ro.build.PDA=T976BXXU2CVCD
 ro.build.official.release=true
 ro.build.2ndbrand=false
 ro.config.rm_preload_enabled=1
-ro.build.changelist=23600157
+ro.build.changelist=23981869
 ro.product_ship=true
 
 # Audio
@@ -11,6 +11,7 @@ qcom.hw.aac.encoder=true
 tunnel.audio.encode=true
 
 # Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 
 # Camera
@@ -18,7 +19,6 @@ ro.camerax.extensions.enabled=true
 
 # Charger
 ro.charger.enable_suspend=1
-ro.charger.disable_init_blank=true
 
 # CNE
 persist.vendor.cne.feature=1
@@ -40,20 +40,20 @@ pm.dexopt.post-boot=extract
 pm.dexopt.shared=speed
 
 # Data modules
-ro.vendor.use_data_netmgrd=true
+#ro.vendor.use_data_netmgrd=true
 persist.vendor.data.mode=concurrent
 
 # MM modules
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+#media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+vendor.mm.enable.qcom_parser=16777215
 persist.mm.enable.prefetch=true
 
 # Netflix custom property
 ro.netflix.bsp_rev=Q8250-19134-1
 
 # Radio
-persist.radio.sib16_support=1
 persist.vendor.radio.atfwd.start=true
 
 # SDcard
@@ -68,6 +68,5 @@ persist.timed.enable=true
 qemu.hw.mainkeys=0
 ro.kernel.qemu=0
 ro.kernel.qemu.gles=0
-ro.multisim.simslotcount=1
 ro.vendor.qti.va_aosp.support=1
 use.voice.path.for.pcm.voip=true

@@ -42,7 +42,6 @@ BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
-TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Display
@@ -77,6 +76,8 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Fingerprint
 TARGET_SEC_FP_CALL_CANCEL_ON_ENROLL_COMPLETION := true
 TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
+TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES := true
+TARGET_SEC_FP_REQUEST_FORCE_CALIBRATE := true
 
 # HIDL
 # specifies framework requirements on conforming vendor implementations

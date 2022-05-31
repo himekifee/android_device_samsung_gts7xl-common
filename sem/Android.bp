@@ -1,0 +1,11 @@
+
+
+java_library {
+    name: "sem_framework",
+    installable: true,
+    srcs: ["src/**/*.java"],
+
+    dex_preopt: {
+        enabled: false,
+    },
+}
