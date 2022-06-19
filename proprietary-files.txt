@@ -152,7 +152,14 @@ vendor/etc/seccomp_policy/samsung.software.media.c2-base-policy
 vendor/etc/seccomp_policy/samsung.software.media.c2-ext-policy
 
 # Bluetooth
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/audio.bluetooth_qti.default.so
+system/lib/android.hardware.bluetooth@1.0.so
+system/lib64/android.hardware.bluetooth@1.0.so
+system/lib64/android.hardware.bluetooth@1.1.so
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
@@ -172,6 +179,10 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib/com.qualcomm.qti.ant@1.0.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so
+vendor/lib/android.hidl.base@1.0.so
+vendor/lib64/android.hidl.base@1.0.so
 
 # Camera
 system/lib/libSEF.quram.so
@@ -711,6 +722,8 @@ vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libqfp_sensortest.so
 vendor/lib64/libsynaFpSensorTestNwd.so
 vendor/lib64/vendor.samsung.hardware.biometrics.face@2.0.so
+system/lib/android.hardware.biometrics.fingerprint@2.1.so
+system/lib64/android.hardware.biometrics.fingerprint@2.1.so
 
 # FM
 vendor/bin/fmconfig
@@ -1220,7 +1233,7 @@ system/lib64/libsecril-client.so
 vendor/lib64/libqmiservices-sem-ext.so
 system/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 system/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
--system/priv-app/SecTelephonyProvider/SecTelephonyProvider.apk
+# -system/priv-app/SecTelephonyProvider/SecTelephonyProvider.apk
 system_ext/lib/vendor.qti.hardware.data.connection@1.0.so
 system_ext/lib/vendor.qti.hardware.data.connection@1.1.so
 system_ext/lib/vendor.qti.hardware.data.iwlan@1.0.so
@@ -1326,7 +1339,7 @@ system/lib64/libcurl2.so
 system/lib64/libresampler_ims.so
 system/lib64/libsec-ims.so
 -system/priv-app/ImsLogger/ImsLogger.apk
--system/priv-app/imsservice/imsservice.apk
+# -system/priv-app/imsservice/imsservice.apk
 # system/priv-app/imsservice/lib/arm64/libsec-ims.so soft link to system/lib64/libsec-ims.so
 system/etc/permissions/privapp-permissions-com.sec.imsservice.xml
 -system/priv-app/EpdgService/EpdgService.apk
@@ -1642,3 +1655,6 @@ vendor/firmware/qca6390/amss20.bin
 vendor/firmware/cs35l40-spk-dsp1-spk-prot.wmfw
 vendor/firmware/cs35l40-spk-dsp1-spk-prot.bin
 vendor/firmware/cs35l40-spk-dsp1-spk-prot-calib.bin
+vendor/firmware/htbtfw20.tlv
+vendor/firmware/htnv20.bin
+system/etc/ueventd.rc
